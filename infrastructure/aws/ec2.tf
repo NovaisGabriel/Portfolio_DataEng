@@ -2,8 +2,9 @@ data "template_file" "init" {
   template = "./CI/scripts/startup.sh"
 }
 
+# https://cloud-images.ubuntu.com/locator/ec2/
 resource "aws_instance" "airflow-iac" {
-  ami           = "ami-0ed9277fb7eb570c9"
+  ami           = "ami-0b4577d77dac11b84"
   instance_type = "t3.medium"
   key_name = "airflow-iac2"
 
