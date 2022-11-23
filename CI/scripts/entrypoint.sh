@@ -1,4 +1,3 @@
 #!/bin/bash
-set -e
-
-python ./extraction_iris/run.py
+python3 --version
+python3 ./extraction_iris/run.py
