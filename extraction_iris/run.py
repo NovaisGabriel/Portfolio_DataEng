@@ -17,7 +17,7 @@ print("Unzip files...")
 # Extrai o conteúdo do zipfile para a pasta selecionada
 # myzip = zipfile.ZipFile('../data/Iris.rar')
 # myzip.extractall('./data_extracted')
-with zipfile.ZipFile('../data/Iris.zip', 'r') as zip_ref:
+with zipfile.ZipFile('./data/Iris.zip', 'r') as zip_ref:
     zip_ref.extractall('./data_extracted')
 
 
