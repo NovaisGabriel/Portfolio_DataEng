@@ -37,5 +37,4 @@ terraform.rc
 *_env
 *.env
 *.DS_Store
-data/
-enem2020/
+
