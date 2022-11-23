@@ -54,7 +54,6 @@ jobs:
           apk add --update py3-pip
           pip3 install awscli
           pip3 install boto3
-          pip3 install zipfile
           chmod -R +x ./CI/scripts
           ./CI/scripts/entrypoint.sh prod -auto-approve
 
