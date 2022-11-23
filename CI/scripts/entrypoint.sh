@@ -1,2 +1,6 @@
 #!/bin/bash
-python3 ./extraction_iris/run.py
+set -e
+
+cd extraction_iris
+
+python3 run.py
