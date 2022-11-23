@@ -2,7 +2,7 @@ name: Staging
 
 on:
   push:
-    branches: [staging, modulofinal]
+    branches: [staging, dev]
 
 jobs:
   staging_build_and_push:
