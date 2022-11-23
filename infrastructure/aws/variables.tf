@@ -17,7 +17,7 @@ locals {
     Project      = "Datalake"
     ManagedBy    = "Terraform"
     Department   = "systems",
-    Provider     = "A3DATA",
+    Provider     = "gabriel",
     Owner        = "Data Engineering"
     BusinessUnit = "Data"
     Billing      = "Infrastructure"

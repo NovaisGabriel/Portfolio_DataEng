@@ -15,14 +15,16 @@ os.makedirs('./data', exist_ok=True)
 
 print("Unzip files...")
 # Extrai o conteúdo do zipfile para a pasta selecionada
-myzip = zipfile.ZipFile('./data/iris.zip')
-myzip.extractall('./data_extracted')
+# myzip = zipfile.ZipFile('../data/Iris.rar')
+# myzip.extractall('./data_extracted')
+with zipfile.ZipFile('../data/Iris.zip', 'r') as zip_ref:
+    zip_ref.extractall('./data_extracted')
 
 
 print("Upload to S3...")
 s3_client = boto3.client('s3', aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'], aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'])
 s3_client.upload_file(
     "./data_extracted/iris.csv", 
-    "testelake", 
+    "teste-estrutura-prod-landing-zone-715036709715", 
     "data_extracted/iris.csv"
 )
