@@ -1,5 +1,5 @@
 data "template_file" "init" {
-  template = "${file("scripts/startup.sh.tpl")}"
+  template = "${file("/CI/scripts/startup.sh")}"
 }
 
 resource "aws_instance" "airflow-iac" {
