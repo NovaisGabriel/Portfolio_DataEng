@@ -3,4 +3,4 @@ set -e
 
 cd extraction_iris
 
-python3 ./run.py
+python3 ./extraction_iris/run.py
