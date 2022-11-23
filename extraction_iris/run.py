@@ -14,7 +14,7 @@ os.makedirs('./data', exist_ok=True)
 # filebytes = BytesIO(requests.get(url).content)
 
 print("Unzip files...")
-# Extrai o conteúdo do zipfile
+# Extrai o conteúdo do zipfile para a pasta selecionada
 myzip = zipfile.ZipFile('./data/iris.zip')
 myzip.extractall('./data_extracted')
 
