@@ -1,6 +1,6 @@
 import zipfile
-import requests
-from io import BytesIO
+# import requests
+# from io import BytesIO
 import os
 import boto3
 

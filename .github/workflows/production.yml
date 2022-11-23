@@ -53,13 +53,8 @@ jobs:
           apk add python3
           apk add --update py3-pip
           pip3 install awscli
-          pip3 install pandas
-          pip3 install requests
-          pip3 install BytesIO
-          pip3 install os
           pip3 install boto3
           pip3 install zipfile
-          pip3 install numpy
           chmod -R +x ./CI/scripts
           ./CI/scripts/entrypoint.sh prod -auto-approve
 
