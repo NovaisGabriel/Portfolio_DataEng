@@ -15,7 +15,7 @@ resource "aws_instance" "airflow-iac" {
   user_data = "${data.template_file.init.rendered}"
 
   tags = {
-      Name = "Aiflow-Iac"
+      Name = "airflow-iac"
   } 
 }
 
