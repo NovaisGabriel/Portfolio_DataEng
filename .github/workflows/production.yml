@@ -44,10 +44,10 @@ jobs:
     name: Production Extract Data
     needs: prod_apply
     runs-on: ubuntu-latest
-    container: docker:20-dind
+    container: python:3.8-slim
     steps:
       - uses: actions/checkout@v2
-      - name: terraform apply
+      - name: terraform extract
         run: |
           chmod -R +x ./CI/scripts
           ./CI/scripts/entrypoint.sh prod -auto-approve
