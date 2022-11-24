@@ -20,7 +20,7 @@ resource "aws_key_pair" "kp" {
 resource "aws_instance" "airflow-iac" {
   ami           = "ami-0b4577d77dac11b84"
   instance_type = "t3.medium"
-  key_name = "aws_key_pair.mk.mk"
+  key_name = "aws_key_pair.kp.public-key"
 
   vpc_security_group_ids = [aws_security_group.allow-all-traffic-vpn-ingress.id, aws_security_group.allow-all-traffic-vpn-egress.id] 
 
