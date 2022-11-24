@@ -1,13 +1,13 @@
 # Security Group
 resource "aws_security_group" "allow-all-traffic-vpn-ingress" {
 
-  name = "terraform_ingress" 
+  name = "terraform_ingress"
 
   ingress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks =  ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
 }
@@ -15,13 +15,13 @@ resource "aws_security_group" "allow-all-traffic-vpn-ingress" {
 # Security Group
 resource "aws_security_group" "allow-all-traffic-vpn-egress" {
 
-  name = "terraform_egress" 
+  name = "terraform_egress"
 
   egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks =  ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
 }
