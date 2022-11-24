@@ -2,9 +2,18 @@ data "template_file" "init" {
   template = "./CI/scripts/startup.sh"
 }
 
-resource "aws_key_pair" "mk" {
-  key_name = "mk"
-  public_key = "./public-key.pub"
+resource "tls_private_key" "pk" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
+resource "aws_key_pair" "kp" {
+  key_name   = "public-key"       # Create a "myKey" to AWS!!
+  public_key = tls_private_key.pk.public_key_openssh
+
+  provisioner "local-exec" { # Create a "myKey.pem" to your computer!!
+    command = "echo '${tls_private_key.pk.private_key_pem}' > ./public-key.pem"
+  }
 }
 
 # https://cloud-images.ubuntu.com/locator/ec2/
