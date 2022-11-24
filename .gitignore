@@ -37,4 +37,5 @@ terraform.rc
 *_env
 *.env
 *.DS_Store
-conectaEC2.pem
+public-key.pem
+public-key.pub
