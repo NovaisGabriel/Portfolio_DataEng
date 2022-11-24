@@ -34,7 +34,7 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_eip" "public_ip" {
-  instance = aws_instance.airflow-iac.id
+  instance = aws_instance.myec2.id
   vpc      = true
 }
 
