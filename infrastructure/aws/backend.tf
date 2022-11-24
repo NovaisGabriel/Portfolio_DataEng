@@ -5,4 +5,9 @@ terraform {
     key    = "state/terraform.tfstate"
     region = "us-east-2"
   }
+  required_providers {
+    tls = {
+      version = ">=3.0"
+    }
+  }
 }
