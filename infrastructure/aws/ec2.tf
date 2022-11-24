@@ -8,10 +8,10 @@ resource "tls_private_key" "pk" {
 }
 
 resource "aws_key_pair" "kp" {
-  key_name   = "public-key"       # Create a "myKey" to AWS!!
+  key_name   = "public-key" 
   public_key = tls_private_key.pk.public_key_openssh
 
-  provisioner "local-exec" { # Create a "myKey.pem" to your computer!!
+  provisioner "local-exec" {
     command = "echo '${tls_private_key.pk.private_key_pem}' > ./public-key.pem"
   }
 }
