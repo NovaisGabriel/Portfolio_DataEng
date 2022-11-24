@@ -1,7 +1,7 @@
 # Security Group
 resource "aws_security_group" "allow-all-traffic-vpn-ingress" {
 
-  name = "terraform_ingress"
+  name = "tf_ingress"
 
   ingress {
     from_port   = 0
@@ -15,7 +15,7 @@ resource "aws_security_group" "allow-all-traffic-vpn-ingress" {
 # Security Group
 resource "aws_security_group" "allow-all-traffic-vpn-egress" {
 
-  name = "terraform_egress"
+  name = "tf_egress"
 
   egress {
     from_port   = 0

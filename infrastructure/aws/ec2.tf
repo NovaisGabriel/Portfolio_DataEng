@@ -8,13 +8,14 @@ resource "tls_private_key" "pk" {
 }
 
 resource "aws_key_pair" "TFkey" {
-  key_name   = "newkey" 
+  key_name   = "mykey" 
   public_key = tls_private_key.pk.public_key_openssh
 }
 
 resource "local_file" "ssh_key" {
-  filename = "${aws_key_pair.TFkey.key_name}.pem"
+  filename = "secretkey/${aws_key_pair.TFkey.key_name}.pem"
   content = tls_private_key.pk.private_key_pem
+  file_permission = "0400" 
 }
 
 resource "aws_instance" "web" {
@@ -29,7 +30,7 @@ resource "aws_instance" "web" {
   user_data = data.template_file.init.rendered
 
   tags = {
-    Name = "myec2"
+    Name = "newec2"
   }
 }
 

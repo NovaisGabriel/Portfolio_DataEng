@@ -37,5 +37,3 @@ terraform.rc
 *_env
 *.env
 *.DS_Store
-public-key.pem
-public-key.pub
