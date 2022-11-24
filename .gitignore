@@ -39,3 +39,4 @@ terraform.rc
 *.DS_Store
 terraform-keys2
 terraform-keys2.pub
+id_rsa.pub

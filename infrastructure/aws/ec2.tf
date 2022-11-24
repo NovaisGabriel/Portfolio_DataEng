@@ -2,16 +2,16 @@ data "template_file" "init" {
   template = "./CI/scripts/startup.sh"
 }
 
-resource "aws_key_pair" "terraform-keys2" {
-  key_name = "terraform-keys2"
-  public_key = "./terraform-keys2.pub"
+resource "aws_key_pair" "mk" {
+  key_name = "mk"
+  public_key = "./id_rsa.pub"
 }
 
 # https://cloud-images.ubuntu.com/locator/ec2/
 resource "aws_instance" "airflow-iac" {
   ami           = "ami-0b4577d77dac11b84"
   instance_type = "t3.medium"
-  key_name = "aws_key_pair.terraform-keys2.terraform-keys2"
+  key_name = "aws_key_pair.mk.mk"
 
   vpc_security_group_ids = [aws_security_group.allow-all-traffic-vpn-ingress.id, aws_security_group.allow-all-traffic-vpn-egress.id] 
 
