@@ -4,7 +4,7 @@ data "template_file" "init" {
 
 resource "aws_key_pair" "mk" {
   key_name = "mk"
-  public_key = "./id_rsa.pub"
+  public_key = "./conectaEC2.pem"
 }
 
 # https://cloud-images.ubuntu.com/locator/ec2/

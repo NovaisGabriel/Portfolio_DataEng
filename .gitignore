@@ -37,6 +37,4 @@ terraform.rc
 *_env
 *.env
 *.DS_Store
-terraform-keys2
-terraform-keys2.pub
-id_rsa.pub
+conectaEC2.pem
