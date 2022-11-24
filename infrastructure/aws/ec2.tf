@@ -4,7 +4,7 @@ data "template_file" "init" {
 
 resource "aws_key_pair" "terraform-keys2" {
   key_name = "terraform-keys2"
-  public_key = "terraform-keys2.pub"
+  public_key = "./terraform-keys2.pub"
 }
 
 # https://cloud-images.ubuntu.com/locator/ec2/

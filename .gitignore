@@ -37,4 +37,5 @@ terraform.rc
 *_env
 *.env
 *.DS_Store
-
+terraform-keys2
+terraform-keys2.pub
