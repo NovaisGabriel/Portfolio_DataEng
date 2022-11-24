@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ronya3data/rony-ci:0.0.1-terraform1.0.3
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: terraform destroy
         run: |
           chmod -R +x ./CI/scripts
